@@ -1,0 +1,267 @@
+@use './../../app/scss/prolift.scss' as *;
+
+.page { position: absolute; width: 100%; top: 0 }
+.container-fluid { position: relative; width: 100% }
+::ng-deep .row { margin: 0 }
+
+.row > :not(.banner)  {/*WORKLOAD RISK USING THIS METHOD. POSSIBLE PERFORMANCE IMPACT*/
+  position: relative;
+  font-family: Assistant; font-size: 20px; font-weight: 300; font-stretch: normal;
+  font-style: normal; letter-spacing: normal; text-align: right;
+}
+
+.banner {
+    .banner__image{
+      position: relative; width:100%; top:0px;
+    }
+    .banner__title {
+      position: absolute;
+      top: 293px;    right: 376px;    width: max-content !important;    height: 45px;
+      font-family: Assistant; font-size: 60px; font-weight: 200; line-height: 1.25; text-align: center;
+      color: #ffffff;
+    }
+}
+
+.content {
+     > * { position: relative }
+    background: white; border-top: 5px solid #3047d3; top: 0px; width:100%;
+    input.mat-input-element { color: #9d9d9d }  
+    input { caret-color: #9d9d9d }
+
+    //inputs ====
+    ::ng-deep input { padding-bottom: 5px; border-bottom: 0.5px solid white}
+    ::ng-deep input:focus { padding-bottom: 5px; border-bottom: 0.5px solid #3047d3 }
+    ::ng-deep .mat-form-field-underline { display: none }
+    //mat-label { color: black; font-weight: bold; }   
+    mat-form-field {position: absolute}
+
+    //checkbox ====
+    ::ng-deep .mat-checkbox-inner-container { //size of checkbox
+      height: 20px!important;
+      width: 20px!important;
+    }
+
+    ::ng-deep .mat-checkbox {
+      .mat-checkbox-ripple .mat-ripple-element {
+          background-color: #07abe9 !important; //checkbox - ripple color
+      }
+      .mat-checkbox-frame {
+          border-color: rgb(0, 0, 0) !important; //checkbox - border
+      }
+    }
+    ::ng-deep .mat-checkbox-checked.mat-accent .mat-checkbox-ripple .mat-ripple-element {//checkbpx - wth
+      opacity: 0.03 !important;
+      background-color: #005691 !important;
+    }
+    ::ng-deep .mat-checkbox-checked.mat-accent .mat-checkbox-background,
+    .mat-checkbox-indeterminate.mat-accent .mat-checkbox-background {//checkbox - background
+      background-color: white !important;
+    }
+    ::ng-deep span.mat-checkbox-label {//checkbox - label
+      color: $black;
+    }
+    ::ng-deep mat-checkbox .mat-checkbox-checkmark-path {// checkbox - checkmark
+      stroke: $blue !important;
+    }
+
+    [class*="bold"] {font-weight: 900}
+
+    [class^="line"] { height: 60px}
+    [class*="e-field"] {height: 90px}
+    [class$="title"] {color: $blue; font-size: 33px; text-decoration: underline; font-weight:900; height: 85px}
+
+    ::ng-deep input { padding-bottom: 5px; border-bottom: 0.5px solid gray}
+    ::ng-deep input:focus {
+      padding-bottom: 5px; border-bottom: 0.5px solid $blue;
+    }
+
+    .tofes-hazmanat-muzar{
+        position: relative;
+        width: 1168px; height: 700px; right: 376px;
+         > * {position: absolute;}
+        
+        .tofes-hazmanat-muzar__title {
+            top: 200px;
+            @include title;
+        }
+        .tofes-hazmanat-muzar__dash {
+            top: 177px;
+            @include dash;
+        }
+        .tofes-hazmanat-muzar__title-header {
+            top: 150px; right: 50px;
+            @include title-header;
+        }
+
+        #company-name {            top: 300px; right: 0px;        }
+        #phone {            top: 300px; right: 400px;        } 
+        #fax {            top: 300px; right: 800px;        }
+        #contact-man {            top: 400px; right: 0px     }
+        #cell-phone {            top: 400px; right: 400px;        }
+        #order-number {            top: 500px; right: 0px;        }
+        #site-id {            top: 500px; right: 400px;        }
+        #requested-order-deadline {            top: 500px; right: 800px;        }
+    }
+    .mifrat-masheva { 
+      height: 400px; width: 1168px; margin-right: 376px;
+
+      mat-label { color: black; font-weight: bold; }
+
+        .mifrat-masheva__title{
+            font-weight: bold; color: $blue; font-size: 33px; text-decoration: underline;
+        }
+        .line1 {
+          font-weight: 900;
+        }
+        .line2 {
+          margin-top: 35px;
+          .line2__2 {margin-right:60px}
+          .line2__3 {margin-right:60px}
+        }
+        #other {margin-top:30px}
+
+    }
+    .mifrat-pikud{
+        width: 1168px; margin-right:376px;
+         > * {position: relative} 
+
+        mat-label { color: black; font-weight: bold; }
+
+        .mifrat-pikud__title{
+            font-weight: bold; color: $blue; font-size: 33px; text-decoration: underline;
+        }
+        .mifrat-pikud__pikud-kvuzati{
+          font-weight: 900; height: 70px;
+        }
+        .line2 {
+          height: 80px;
+          .line2__1 {margin-right:25px}
+          .line2__2 {margin-right:60px}
+          .line2__3 {margin-right:60px}
+          .line2__4 {margin-right:60px}
+        }
+        .line3 {
+          height: 80px;
+          #station-amount {
+            width: max-content !important; top: -24px; right: -14px;
+          }
+
+          .mifrat-pikud__tahanot-mefulasot {
+            display: inline-block; margin-right: 380px; font-weight: 900;
+          }
+        }
+        .line4 {height:80px}
+
+        #notes {right: -14px}
+
+        #notes-pikud-shabat {right: -14px}
+    }
+
+    .mifrat-dlatot {
+      width: 1168px; margin-right:376px;
+      > * {position: relative} 
+
+      mat-label { color: black; font-weight: bold; }
+
+      #degem, #degem-dlatot-huz, #other-netunei-manoa-delet {
+        margin-right: -14px; margin-top: -24px;
+      }
+
+      #notes-netunei-manoa-delet {
+        right: -14px;
+      }
+    }
+    .authorization {
+      width: 1168px; margin-right:376px;
+      > * {position: relative} 
+
+      mat-label { color: black; font-weight: bold; }
+
+      #signature, #date, #recipient {
+        margin-right: -14px; margin-top: -24px;
+      }
+
+    }
+    .send-order { //submit button
+      width: 183px;  height: 66px; margin-right:376px;
+      color: #ffffff;  background-color: #3047d3;
+      font-size: 19px;  font-weight: bold;  line-height: 1.89;
+    }
+}
+
+.contactus {// * {position: absolute;} //caused PROBLEMS | * :not(#classic)// caused problems too
+  top: 0px; width: 1920px; height: 664px;
+    > * { position: absolute }  
+  .contactus__dash,.contactus__title-header,.contactus__title,.contactus__location-icon,
+  .contactus__phone-icon,.contactus__email-icon,.contactus__location,.contactus__phone,.contactus__email
+    { color: #fefefe }
+
+  .contactus__location-icon,.contactus__email-icon,.contactus__phone-icon { width: 27px }
+  
+  .contactus__image { z-index: -1; width: 1920px; height: 664px }
+  .contactus__image-overlay { opacity: 0.5; background-color: black; width: 1920px; height: 664px }
+  .contactus__dash { width: 27px; height: 3px; top: 157px; right: 376px }
+  .contactus__title {
+    color: #f9f9f9; top: 192px; right: 374px; width: max-content !important; height: 37px;
+    font-size: 47px; font-weight: bold; line-height: 1.17;
+  }
+  .contactus__title-header {
+    top: 131px; right: 422px; width: max-content !important; height: 17px;
+    font-size: 18px; font-weight: bold; line-height: 3.06; letter-spacing: 1.8px;
+  }
+  .contactus__location {
+    width: max-content !important; height: 22px; top: 306px; right: 426px;
+    font-size: 23px; line-height: 0.5;
+  }
+  .contactus__location-icon { top: 296px; right: 376px; height: 37px }
+  .contactus__phone {
+    width: max-content !important; height: 16px; top: 368px; right: 425px;
+    font-size: 23px; line-height: 0.5;
+  }
+  .contactus__phone-icon { top: 360px; right: 374px; height: 27px }
+  .contactus__email {
+    width: max-content !important; height: 22px; top: 425px; right: 426px;
+    font-size: 23px; line-height: 0.5;
+  }
+  .contactus__email-icon { top: 423px; right: 373px; height: 21px } 
+
+  .form {                                        /*::ng-deep*/
+    font-size: 19px; font-weight: 600; line-height: 1.84; color: #fefefe;
+      #name,#company,#phonenumber,#emailaddress,#message { position:absolute }
+      #name { width:266px; top: 151px; right: 970px }
+      #company { width:266px; top: 151px; right: 1280px }
+      #phonenumber { width:266px; top: 256px; right: 970px }
+      #emailaddress { width:266px; top: 256px; right: 1280px }
+      #message { width: 577px; top: 355px; right: 970px }
+    input.mat-input-element { color: #fefefe }  
+    input { caret-color: #9d9d9d }
+    ::ng-deep .contactus__input { padding-bottom: 5px; border-bottom: 0.5px solid #fefefe }
+    ::ng-deep .contactus__input:focus { padding-bottom: 5px; border-bottom: 0.5px solid #3047d3 }
+    ::ng-deep .mat-form-field-underline { display: none }
+    mat-label { color: #fefefe }    
+  }
+  #formSubmit {
+    position: absolute; top: 481px;  right: 983px; 
+    width: 183px;  height: 66px;
+    color: #ffffff;  background-color: #3047d3;
+    font-size: 19px;  font-weight: bold;  line-height: 1.89;
+  }
+}
+
+.footer {
+  background-color: #131313; top: 0px;  width: 1924px;  height: 244px;
+  font-size: 17px;  font-weight: 600; line-height: 2.18;
+    > * { position: absolute; height: 13px; color: #7a7a7a }
+  .footer__href-home,.footer__href-about-us,.footer__href-products,.footer__href-order-certificate,
+  .footer__href-settings,.footer__href-contact,.footer__address { top: 73px }
+    .footer__href-home { right: 380px }
+    .footer__href-about-us { right: 458px }
+    .footer__href-products { right: 530px }
+    .footer__href-order-certificate { right: 612px }
+    .footer__href-settings { right: 730px }
+    .footer__href-contact { right: 850px }
+    .footer__address { right: 1179px }
+    .footer__phone { top: 104px; right: 1305px }
+    .footer__href-search-tool { top: 145px; right: 402px }
+}
+

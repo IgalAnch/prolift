@@ -1,0 +1,17 @@
+@use './../../app/scss/prolift.scss' as *;
+
+.page { position: absolute; width: 100%; top: 0 }
+.container-fluid { position: relative; width: 100% }
+::ng-deep .row { margin-top: 100px; margin-right: 0px; }
+
+.ele {
+    margin-top: 120px;
+}
+
+.row{
+    position: relative;
+    > *{
+        display: block;
+    }
+}
+

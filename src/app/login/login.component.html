@@ -1,0 +1,91 @@
+<div class="page" dir="rtl">
+    <div class="container-fluid px-0">
+        <div class="row">        
+            <div class="banner">
+                <img class="banner__image" src="assets/layer_36.jpg"/>
+                <div class="banner__title">טופס הזמנה</div>
+            </div>
+            <div class="content">
+                <div class="login">
+                    <div class="space"></div>
+                    <div class="title">
+                        <div class="title__dash"></div>
+                        <div class="title__title-header">הזינו פרטים ובצעו</div>
+                        <div class="title__title">כניסה למערכת</div>
+                    </div>
+                    <div class="space2"></div>
+                    <form class="login-form" #c="ngForm">
+                        <div class="username">
+                            <img class="username-icon" src="assets/ts_user.jpg"/>
+                            <mat-form-field id="username">
+                                <mat-label>שם משתמש</mat-label>
+                                <input class="form__input" matInput ngModel name="username">
+                            </mat-form-field>
+                        </div>
+                        <div class="password">
+                            <img class="password-icon" src="assets/ts_pass.jpg"/>
+                            <mat-form-field id="password">
+                                <mat-label>סיסמה</mat-label>
+                                <input class="form__input" matInput ngModel name="password">
+                            </mat-form-field>
+                        </div>
+                        <div class="misc">
+                            <div class="signup">הרשמה</div>
+                            <div class="forgot-password">שכחתי סיסמה</div>
+                        </div>
+                        <button id="formSubmit" (click)="onSubmitLogin(c)" type="submit">כניסה</button>
+                    </form>
+                    <div class="space3"></div>
+                </div>
+                <div class="contact-us block">
+                    <img class="contact-us__image" src="assets/contactus_fullop.png" />
+                    <div class="contact-us__image-overlay"></div>
+                    <div class="contact-us__dash"></div>
+                    <div class="contact-us__title-header">אנו כאן לשירותכם</div>
+                    <div class="contact-us__title">צרו עימנו קשר</div>
+                    <img class="contact-us__location-icon" src="assets/location_icon.png" />
+                    <div class="contact-us__location">המרכבה 52, אזור התעשייה חולון</div>
+                    <img class="contact-us__phone-icon" src="assets/phone-call.png" />
+                    <div class="contact-us__phone">03-6540500</div>
+                    <img class="contact-us__email-icon" src="assets/envelope.png" />
+                    <div class="contact-us__email">prolift@prolift.co.il</div>
+                    <form (ngSubmit)="onSubmit(c)" class="contact-us__form form block" #c="ngForm" id="contactForm" dir="rtl" >
+                      <mat-form-field id="name">
+                        <mat-label>שם מלא</mat-label>
+                        <input class="contact-us__input" matInput ngModel name="name">
+                      </mat-form-field>
+                      <mat-form-field id="company">
+                        <mat-label>חברה</mat-label>
+                        <input class="contact-us__input" matInput ngModel name="company"/>
+                      </mat-form-field>
+                      <mat-form-field id="phonenumber">
+                        <mat-label>טלפון</mat-label>
+                        <input class="contact-us__input" matInput ngModel name="phone"/>
+                      </mat-form-field>
+                      <mat-form-field id="emailaddress">
+                        <mat-label>דוא"ל</mat-label>
+                        <input class="contact-us__input" matInput ngModel name="email"/>
+                      </mat-form-field>
+                      <mat-form-field id="message">
+                        <mat-label>הודעה</mat-label>
+                        <input class="contact-us__input" matInput placeholder="" value="" ngModel name="message"/>
+                      </mat-form-field >
+                      <button id="formSubmit" (click)="onSubmit(c)" type="submit">שלח</button>
+                    </form>
+                  </div>
+          
+                  <div class="footer block">
+                    <div class="footer__home">דף בית</div>
+                    <div class="footer__about-us">אודות</div>
+                    <div class="footer__products">מוצרים</div>
+                    <div class="footer__tofes-hazmana">טופס הזמנה</div>
+                    <div class="footer__settings">תמיכה טכנית</div>
+                    <div class="footer__contact">צור קשר</div>
+                    <div class="footer__address">המרכבה 25 אזור תעשיה חולון, ת.ד 3652 ראש העין, ישראל</div>
+                    <div class="footer__phone">טלפון 03-6540500, פקס 03-6540502</div>
+                    <div class="footer__search-tool">חפש</div>
+                  </div>
+            </div>
+        </div>
+    </div>
+</div>

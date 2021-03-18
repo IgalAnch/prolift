@@ -1,0 +1,163 @@
+@use './../../app/scss/prolift.scss' as *;
+
+.page { position: absolute; width: 100%; top: 0 }
+.container-fluid { position: relative; width: 100% }
+::ng-deep .row { margin: 0 }
+
+.row > :not(.banner)  {/*WORKLOAD RISK USING THIS METHOD. POSSIBLE PERFORMANCE IMPACT*/
+  position: relative;
+  font-family: Assistant; font-size: 20px; font-weight: 300; font-stretch: normal;
+  font-style: normal; letter-spacing: normal; text-align: right;
+}
+
+// * {// TEST
+//     border: 1px solid purple;
+// }
+
+.banner {
+    position: absolute;
+    > * { position: relative }
+    .banner__image { z-index: -1; width: 100% }
+    .banner__title { @include banner__title }
+}
+
+.content {
+    > * { position: relative }
+  border-top: 5px solid #3047d3; top: 445px; width: 100%; height: 1600px; 
+
+  .product {
+      width: 1168px; right: 376px;
+       > * {position: relative}
+      .right {
+          > * {position: relative}
+          display: inline-block;
+          width: 50%; height: 1000px;
+          .space {height: 100px}
+          .title {
+               > * {position:absolute} height: 200px;
+              .title__dash {@include dash; top: 27px;}
+              .title__title {@include title; top: 50px;}
+              .title__title-header {@include title-header; right: 50px}
+          }
+          .image {
+              width: 100%; 
+              .image__image {max-height: 600px;}
+          }
+          .space2 {height: 65px}
+          .buttons {
+              .order {
+                width: 183px;  height: 65px;
+                background-color: #3047d3;
+                font-family: Assistant;  font-size: 20px;  font-weight: bold;   line-height: 2.75;
+                color: #ffffff;
+              }
+              .tech-support {
+                width: 183px;  height: 65px; margin-right: 18px;
+                background-color: #f9f9f9;
+                font-size: 20px;  font-weight: bold;  line-height: 2.75;
+                color: #3047d3;
+              }
+          }
+
+      }
+      .left {
+          float: left;
+          text-align: left;
+          width: 50%; height: 1000px;
+
+          .space {height: 270px}
+
+          .properties {
+            width: 100%;
+            .property {
+                width: 100%; margin-top: 14px;
+                .caret {
+                    float: left; width: 6%; //display: inline-block;
+                    img {left: 0px; margin-top: -5px;}
+                }
+                .text {
+                    width: 94%; height: max-content; font-weight: 600;
+                }
+            }
+
+        }
+      }
+  }
+}
+
+
+.contact-us {// * {position: absolute;} //caused PROBLEMS | * :not(#classic)// caused problems too
+  top: 0px; width: 1920px; height: 664px;
+    > * { position: absolute }  
+  .contact-us__dash,.contact-us__title-header,.contact-us__title,.contact-us__location-icon,
+  .contact-us__phone-icon,.contact-us__email-icon,.contact-us__location,.contact-us__phone,.contact-us__email
+    { color: #fefefe }
+
+  .contact-us__location-icon,.contact-us__email-icon,.contact-us__phone-icon { width: 27px }
+  
+  .contact-us__image { right: 0px; z-index:-1; width: 1920px; height: 664px }
+  .contact-us__image-overlay { opacity: 0.5; background-color: black; width: 1920px; height: 664px }
+  .contact-us__dash { width: 27px; height: 3px; top: 157px; right: 376px }
+  .contact-us__title {
+    color: #f9f9f9; top: 192px; right: 374px; width: max-content !important; height: 37px;
+    font-size: 47px; font-weight: bold; line-height: 1.17;
+  }
+  .contact-us__title-header {
+    top: 131px; right: 422px; width: max-content !important; height: 17px;
+    font-size: 18px; font-weight: bold; line-height: 3.06; letter-spacing: 1.8px;
+  }
+  .contact-us__location {
+    width: max-content !important; height: 22px; top: 306px; right: 426px;
+    font-size: 23px; line-height: 0.5;
+  }
+  .contact-us__location-icon { top: 296px; right: 376px; height: 37px }
+  .contact-us__phone {
+    width: max-content !important; height: 16px; top: 368px; right: 425px;
+    font-size: 23px; line-height: 0.5;
+  }
+  .contact-us__phone-icon { top: 360px; right: 374px; height: 27px }
+  .contact-us__email {
+    width: max-content !important; height: 22px; top: 425px; right: 426px;
+    font-size: 23px; line-height: 0.5;
+  }
+  .contact-us__email-icon { top: 423px; right: 373px; height: 21px } 
+
+  .form {                                        /*::ng-deep*/
+    font-size: 19px; font-weight: 600; line-height: 1.84; color: #fefefe;
+      #name,#company,#phonenumber,#emailaddress,#message { position:absolute }
+      #name { width:266px; top: 151px; right: 970px }
+      #company { width:266px; top: 151px; right: 1280px }
+      #phonenumber { width:266px; top: 256px; right: 970px }
+      #emailaddress { width:266px; top: 256px; right: 1280px }
+      #message { width: 577px; top: 355px; right: 970px }
+    input.mat-input-element { color: #fefefe }  
+    input { caret-color: #9d9d9d }
+    ::ng-deep .contact-us__input { padding-bottom: 5px; border-bottom: 0.5px solid #fefefe }
+    ::ng-deep .contact-us__input:focus { padding-bottom: 5px; border-bottom: 0.5px solid #3047d3 }
+    ::ng-deep .mat-form-field-underline { display: none }
+    mat-label { color: #fefefe }    
+  }
+  #formSubmit {
+    position: absolute; 
+    top: 481px;  right: 983px; width: 183px;  height: 66px;
+    color: #ffffff;  background-color: #3047d3;
+    font-size: 19px;  font-weight: bold;  line-height: 1.89;
+  }
+}
+
+.footer {
+  background-color: #131313; top: 0px;  width: 1924px;  height: 244px;
+  font-size: 17px;  font-weight: 600; line-height: 2.18;
+  > * { position: absolute; height: 13px; color: #7a7a7a }
+  .footer__home,.footer__about-us,.footer__products,.footer__tofes-hazmana,.footer__settings,
+   .footer__contact,.footer__address { top: 73px }
+    .footer__home { right: 380px }
+    .footer__about-us { right: 458px }
+    .footer__products { right: 530px }
+    .footer__tofes-hazmana { right: 612px }
+    .footer__settings { right: 730px }
+    .footer__contact { right: 850px }
+    .footer__address { right: 1179px }
+    .footer__phone { top: 104px; right: 1305px }
+    .footer__search-tool { top: 145px; right: 402px }
+}

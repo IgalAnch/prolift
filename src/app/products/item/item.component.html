@@ -1,0 +1,17 @@
+<div class="products__all__product_all">
+    <button class="overlay-button" [routerLink]="['/product', colu ]">לדף מוצר</button>
+    <button class="overlay-order">
+    <img src="assets/products_order.png"/>
+    </button>
+    <div class="products__all__product-overlay">
+    <div class="__product__text-overlay">
+        <div class="__product__type-overlay">{{products.pd[colu]==null?null:products.pd[colu].type}}</div>
+        <div class="__product__name-overlay">{{products.pd[colu]==null?null:products.pd[colu].name}}</div>
+    </div>
+    </div>
+    <img src="{{products.pd[colu]==null?null:products.pd[colu].image}}">
+    <div class="__product__text">
+    <div class="__product__type">{{products.pd[colu]==null?null:products.pd[colu].type}}</div>
+    <div class="__product__name">{{products.pd[colu]==null?null:products.pd[colu].name}}</div>
+    </div>
+</div>

@@ -1,0 +1,153 @@
+<div class="page" dir="rtl">
+    <div class="container-fluid px-0">
+        <div class="row">                                                                    
+            <div class="banner">
+                <img class="banner__image block" src="assets/layer_28.jpg" >
+                <div class="banner__title">תמיכה טכנית</div>
+            </div>
+            <div class="content block">
+                <div class="main-info" style="margin-top: 100px;"><!--emit style-->
+                    <div class="upper">
+                        <div class="upper__dash"></div>
+                        <div class="upper__title-header">נשמח לעמוד לשירותכם</div>
+                        <div class="upper__title">טופס תמיכה טכנית</div>
+                    </div>
+                    <div class="lower">
+                        <form class="request-form" #r="ngForm">
+                            <div class="line1">
+                                <div class="company-name">
+                                    <img class="company-name-icon" src="assets/ts2_company.jpg"/>
+                                    <mat-form-field id="company-name">
+                                        <mat-label>שם החברה</mat-label>
+                                        <input class="form__input" matInput ngModel name="company name">
+                                    </mat-form-field>
+                                </div>
+                                <div class="mahut-baaia">
+                                    <img class="mahut-baaia-company" src="assets/ts2_problem.jpg"/>
+                                    <mat-form-field id="mahut-baaia">
+                                        <mat-label>מהות בעיה</mat-label>
+                                        <input class="form__input" matInput ngModel name="mahut-baaia">
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                            <div class="line2">
+                                <div class="support-name">
+                                    <img class="support-name-icon" src="assets/ts2_support-name.jpg"/>
+                                    <mat-form-field id="support-name">
+                                        <mat-label>שם הנציג</mat-label>
+                                        <input class="form__input" matInput ngModel name="support-name">
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                            <div class="line3">
+                                <div class="phone">
+                                    <img class="phone-icon" src="assets/ts2_phone.jpg"/>
+                                    <mat-form-field id="phone">
+                                        <mat-label>טלפון</mat-label>
+                                        <input class="form__input" matInput ngModel name="phone">
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                            <div class="line4">
+                                <div class="email">
+                                    <img class="email-icon" src="assets/ts2_email.jpg"/>
+                                    <mat-form-field id="email">
+                                        <mat-label>דוא"ל</mat-label>
+                                        <input class="form__input" matInput ngModel name="email">
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                            <div class="line5">
+                                <div class="product-type">
+                                    <img class="product-type-icon" src="assets/ts2_product-type.jpg"/>
+                                    <mat-form-field id="product-type">
+                                        <mat-label>סוג מוצר</mat-label>
+                                        <input class="form__input" matInput ngModel name="product-type">
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                            <button id="formSubmit" (click)="onSubmitRequest(r)" type="submit">שלח פניה</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="categories">
+                    <div class="title">
+                        <div class="title__dash"></div>
+                        <div class="title__title-header">לשירותכם מוצגים</div>
+                        <div class="title__title">נושאי תמיכה טכנית</div>
+                    </div>
+                    <div class="category" *ngFor="let category of categories; let i = index" >
+                        <div class="category__pic">
+                            <img src="{{categories[i].img}}"/>
+                        </div>
+                        <!--3ottd;3blm;2ply;2[3]mf;3[0]s;2ss;2[3]bbm;1nf;1ns;1wlc;[1fh]-->
+                        <!--1tr;1dire;1ad;1gto;1cre;1bn;1ts-->
+                        <div class="category__split"></div>
+                        <div class="category__parent">
+                            <div class="__title">{{categories[i].title}}</div>
+                            <div class="category__content">
+                                <div class="pdf" *ngFor="let cat of categories[i].pdf; let j = index">
+                                    <div class="text">{{categories[i].pdf[j].name}}</div>
+                                    <div dir="rtl "class="size">({{categories[i].pdf[j].size}}KB)</div>
+                                    <img src="assets/ts3_pdf.jpg"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contactus block">
+                    <img class="contactus__image" src="assets/contactus_fullop.png" />
+                    <div class="contactus__image-overlay"></div>
+                    <div class="contactus__dash"></div>
+                    <div class="contactus__title-header">אנו כאן לשירותכם</div>
+                    <div class="contactus__title">צרו עימנו קשר</div>
+                    <div class="contactus__location">המרכבה 52, אזור התעשייה חולון</div>
+                    <img class="contactus__location-icon" src="assets/cu_location2.png" />
+                    <div class="contactus__phone">03-6540500</div>
+                    <img class="contactus__phone-icon" src="assets/cu_phone2.png" />
+                    <div class="contactus__email">prolift@prolift.co.il</div>
+                    <img class="contactus__email-icon" src="assets/cu_email2.png" />
+                    <!---->
+                    <form (ngSubmit)="onSubmit(c)" class="contactus__form form block" #c="ngForm" id="contactForm" dir="rtl" >
+                    <mat-form-field id="name">
+                        <mat-label>שם מלא</mat-label>
+                        <input class="contactus__input" matInput ngModel name="name">
+                    </mat-form-field>
+                    <mat-form-field id="company">
+                        <mat-label>חברה</mat-label>
+                        <input class="contactus__input" matInput ngModel name="company"/>
+                    </mat-form-field>
+                    <mat-form-field id="phonenumber">
+                        <mat-label>טלפון</mat-label>
+                        <input class="contactus__input" matInput ngModel name="phone"/>
+                    </mat-form-field>
+                    <mat-form-field id="emailaddress">
+                        <mat-label>דוא"ל</mat-label>
+                        <input class="contactus__input" matInput ngModel name="email"/>
+                    </mat-form-field>
+                    <mat-form-field id="message">
+                        <mat-label>הודעה</mat-label>
+                        <input class="contactus__input" matInput placeholder="" value="" ngModel name="message"/>
+                    </mat-form-field >
+                    <button id="formSubmit" (click)="onSubmit(c)" type="submit">שלח</button>
+                    </form>
+                    <!-- <button id="formSubmit">שלח</button> -->
+                </div>
+            
+                <div class="footer block">
+                    <div class="footer__href-home">דף בית</div>
+                    <div class="footer__href-about-us">אודות</div>
+                    <div class="footer__href-products">מוצרים</div>
+                    <div class="footer__href-order-certificate">טופס הזמנה</div>
+                    <div class="footer__href-settings">תמיכה טכנית</div>
+                    <div class="footer__href-contact">צור קשר</div>
+                    <div class="footer__address">
+                    המרכבה 25 אזור תעשיה חולון, ת.ד 3652 ראש העין, ישראל
+                    </div>
+                    <div class="footer__phone">טלפון 03-6540500, פקס 03-6540502</div>
+                    <div class="footer__href-search-tool">חפש</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,278 @@
+<div class="page" dir="rtl">
+    <div class="container-fluid px-0">
+      <div class="row">        
+        <div class="banner">
+            <img class="banner__image" src="assets/banners/layer_36.jpg" />
+            <div class="banner__title">טופס הזמנה</div>
+        </div>
+        <div class="content">
+            <form (ngSubmit)="onSubmitHazmana(c)" class="contactus__form form block"
+             #c="ngForm" id="contactForm" dir="rtl" >
+                <div class="tofes-hazmanat-muzar">
+                    <div class="tofes-hazmanat-muzar__title">טופס הזמנת מוצר</div>
+                    <div class="tofes-hazmanat-muzar__dash"></div>
+                    <div class="tofes-hazmanat-muzar__title-header">מלא פרטים עבוד</div>
+                    <div class="tofes-hazmanat-muzar__form">
+                        <mat-form-field id="company-name">
+                            <mat-label>שם חברה</mat-label>
+                            <input class="contactus__input" matInput ngModel name="company-name">
+                        </mat-form-field>
+                        <mat-form-field id="phone">
+                            <mat-label>טלפון</mat-label>
+                            <input class="contactus__input" matInput ngModel name="phone"/>
+                        </mat-form-field>
+                        <mat-form-field id="fax">
+                            <mat-label>פקס</mat-label>
+                            <input class="contactus__input" matInput ngModel name="fax"/>
+                        </mat-form-field>
+                        <mat-form-field id="contact-man">
+                            <mat-label>איש קשר</mat-label>
+                            <input class="contactus__input" matInput ngModel name="contact-man">
+                        </mat-form-field>
+                        <mat-form-field id="cell-phone">
+                            <mat-label>טל' נייד</mat-label>
+                            <input class="contactus__input" matInput ngModel name="cell-phone"/>
+                        </mat-form-field>
+                        <mat-form-field id="order-number">
+                            <mat-label>מס' הזמנה</mat-label>
+                            <input class="contactus__input" matInput ngModel name="order-number"/>
+                        </mat-form-field>
+                        <mat-form-field id="site-id">
+                            <mat-label>מס'/שם אתר</mat-label>
+                            <input class="contactus__input" matInput ngModel name="site-id">
+                        </mat-form-field>
+                        <mat-form-field id="requested-order-deadline">
+                            <mat-label>תאריך הספקה מבוקש</mat-label>
+                            <input class="contactus__input" matInput ngModel name="requested-order-deadline"/>
+                        </mat-form-field>  
+                    </div>
+                </div>
+                <div class="mifrat-masheva">
+                    <div class="mifrat-masheva__title">מפרט המשאבה</div>
+                    <div class="line1">סוג המשאבה</div>
+                    <div class="line2">
+                      <mat-checkbox class="line2__1" >GMX</mat-checkbox>
+                      <mat-checkbox class="line2__2"> (עם כרטיס אלקט’) GMV 3100</mat-checkbox>
+                      <mat-checkbox class="line2__3">BERINGER</mat-checkbox>
+                    </div>
+                    <mat-form-field id="other">
+                      <mat-label>אחר</mat-label>
+                      <input class="contactus__input" matInput ngModel name="other"/>
+                    </mat-form-field>  
+                </div>
+                <div class="mifrat-pikud">
+                    <div class="mifrat-pikud__title">מפרט הפיקוד</div>
+                    <div class="mifrat-pikud__pikud-kvuzati line1">פיקוד קבוצתי</div>
+                    <div class="line2">
+                      <mat-checkbox class="line2__1">סימפלקס</mat-checkbox>
+                      <mat-checkbox class="line2__2">דופלקס</mat-checkbox>
+                      <mat-checkbox class="line2__3">טריפלקס</mat-checkbox>
+                      <mat-checkbox class="line2__4">קואדרופלקס</mat-checkbox>
+                    </div>
+                    <div class="line3">
+                      <mat-form-field id="station-amount">
+                        <mat-label>מספר תחנות</mat-label>
+                        <input class="station-amount" matInput ngModel name="station-amount"/>
+                      </mat-form-field>  
+                      <div class="mifrat-pikud__tahanot-mefulasot">תחנות מפולשות</div>
+                    </div>
+                    <div class="line4">
+                      <mat-checkbox class="ex" style="margin-right: 380px">רגילות</mat-checkbox>
+                      <mat-checkbox class="ex" style="margin-right: 100px">סלקטיביות</mat-checkbox>
+                    </div>
+                    <div class="line5 bold">בתחנות</div>
+                    <div class="line5e-field">(נא לצרף תרשים חתך הפיר עם ציון מרחקי תחנות קצרות - אם ישנן)</div>
+                    <div class="line6 bold">סוג האיסוף</div>
+                    <div class="line6e-field">
+                      <mat-checkbox class="c1" style="margin-right: 25px">אוניברסלי</mat-checkbox>
+                      <mat-checkbox class="c2" style="margin-right: 60px">אוניברסלי מאסף ת"א</mat-checkbox>
+                      <mat-checkbox class="c3" style="margin-right: 60px">מאסף מטה</mat-checkbox>
+                      <mat-checkbox class="c4" style="margin-right: 60px">מאסף מלא</mat-checkbox>
+                    </div>
+                    <mat-form-field id="notes">
+                      <mat-label style="right: 20px;">הערות</mat-label>
+                      <input class="contactus__input" matInput ngModel name="notes"/>
+                    </mat-form-field>  
+                    <div class="line8 bold">מתח פיקוד</div>
+                    <div class="line8e-field">
+                      <mat-checkbox class="line8__1" style="margin-right: 25px">48Vdc</mat-checkbox>
+                      <mat-checkbox class="line8__2" style="margin-right: 60px">60Vdc</mat-checkbox>
+                      <mat-checkbox class="line8__3" style="margin-right: 60px">80Vdc</mat-checkbox>
+                      <mat-checkbox class="line8__4" style="margin-right: 60px">110Vdc</mat-checkbox>
+                    </div>
+                    <div class="line9 bold">מראה פיקוד דיגיטלי</div>
+                    <div class="line9e-field">
+                      <mat-checkbox class="line9__1" style="margin-right: 25px">1"</mat-checkbox>
+                      <mat-checkbox class="line9__2" style="margin-right: 60px">1.2"</mat-checkbox>
+                      <mat-checkbox class="line9__3" style="margin-right: 60px">1.5"</mat-checkbox>
+                      <mat-checkbox class="line9__4" style="margin-right: 60px">2"</mat-checkbox>
+                      <mat-checkbox class="line9__5" style="margin-right: 60px">כולל חצי כיוון</mat-checkbox>
+                      <mat-checkbox class="line9__6" style="margin-right: 60px">מתוכנת</mat-checkbox>
+                    </div>
+                    <div class="line10 bold">
+                      <div class="text1" style="display:inline;">סימוני קומות</div>
+                      <div class="text2" style="display:inline; margin-right: 150px">כמות נדרשת</div>
+                    </div>
+                    <div class="line10e-field1"></div>
+                    <div class="line10e-field2">
+                      <mat-checkbox class="line10__1" style="margin-right: 25px">סגור דלת</mat-checkbox>
+                      <mat-checkbox class="line10__2" style="margin-right: 60px">השתקה</mat-checkbox>
+                      <mat-checkbox class="line10__3" style="margin-right: 60px">דלת מוטרדת</mat-checkbox>
+                      <mat-checkbox class="line10__4" style="margin-right: 60px">שמש</mat-checkbox>
+                      <mat-checkbox class="line10__5" style="margin-right: 60px">מגבר מגבר טרמיסטטור</mat-checkbox>
+                    </div>
+                    <div class="line10e-field2">
+                      <mat-checkbox class="line10__1" style="margin-right: 25px">ירידה בחרום</mat-checkbox>
+                      <mat-checkbox class="line10__2" style="margin-right: 60px">לחצני שליחה</mat-checkbox>
+                      <mat-checkbox class="line10__3" style="margin-right: 60px">לחצני שירות</mat-checkbox>          
+                    </div>
+                    <div class="line11 bold">פיקוד שבת</div>
+                    <div class="line11e-field">
+                      <mat-checkbox class="line11__1" style="margin-right: 25px">רגיל</mat-checkbox>
+                      <mat-checkbox class="line11__2" style="margin-right: 60px">רק בתחנות</mat-checkbox>
+                    </div>
+                    <mat-form-field id="notes-pikud-shabat">
+                      <mat-label style="right: 20px;">הערות</mat-label>
+                      <input class="contactus__input" matInput ngModel name="notes-pikud-shabat"/>
+                    </mat-form-field>  
+                    <div class="line12e-field"></div>
+                    <div class="space-field"></div>
+                </div>
+                <div class="mifrat-dlatot">
+                  <div class="mifrat-dlatot__title">מפרט הדלתות</div>
+                  <div class="line1-bold">
+                    <div class="text1"style="display:inline;">דלתות תא</div>
+                    <div class="text2" style="display:inline; margin-right: 340px;">
+                      <mat-form-field id="degem">
+                        <mat-label style="right: 20px;">דגם</mat-label>
+                        <input class="contactus__input" matInput ngModel name="degem"/>
+                      </mat-form-field>  
+                    </div>
+                  </div>
+                  <div class="line1e-field">
+                    <mat-checkbox class="line1__1" style="margin-right: 25px">אוטומטיות</mat-checkbox>
+                    <mat-checkbox class="line1__2" style="margin-right: 90px">ללא דלת</mat-checkbox>
+                  </div>
+                  <div class="line2-bold">
+                    <div class="text1"style="display:inline;">דלתות חוץ</div>
+                    <div class="text2" style="display:inline; margin-right: 290px;">
+                      <mat-form-field id="degem-dlatot-huz">
+                        <mat-label style="right: 20px;">דגם</mat-label>
+                        <input class="contactus__input" matInput ngModel name="degem-dlatot-huz"/>
+                      </mat-form-field>  
+                    </div>
+                  </div>
+                  <div class="line2e-field">
+                    <mat-checkbox class="line2__1" style="margin-right: 25px">כנף</mat-checkbox>
+                    <mat-checkbox class="line2__2" style="margin-right: 90px">אוטומטיות</mat-checkbox>
+                  </div>
+                  <div class="line3-bold">
+                    <div class="text1"style="display:inline;">נתוני מנוע דלת</div>
+                    <div class="text2"style="display:inline; margin-right: 390px;">
+                      <mat-form-field id="other-netunei-manoa-delet">
+                        <mat-label style="right: 20px;">אחר</mat-label>
+                        <input class="contactus__input" matInput ngModel name="other-netunei-manoa-delet"/>
+                      </mat-form-field>  
+                    </div>
+                  </div>
+                  <div class="line3-field">
+                    <mat-checkbox class="line3__1" style="margin-right: 25px">3X125</mat-checkbox>
+                    <mat-checkbox class="line3__2" style="margin-right: 90px">3X380</mat-checkbox>
+                    <mat-checkbox class="line3__2" style="margin-right: 90px">220</mat-checkbox>
+                  </div>
+                  <div class="line3e-field2">
+                    <mat-checkbox class="line3__1" style="margin-right: 25px">עקומה נעה</mat-checkbox>
+                    <mat-checkbox class="line3__2" style="margin-right: 90px">סליל בלימה</mat-checkbox>
+                  </div>
+                  <div class="line4-bold">
+                    <mat-form-field id="notes-netunei-manoa-delet">
+                      <mat-label style="right: 20px;">הערות</mat-label>
+                      <input class="contactus__input" matInput ngModel name="notes-pikud-shabat"/>
+                    </mat-form-field> 
+                  </div>
+                  <div class="e-field1"></div>
+                  <div class="e-field2"></div>
+                  <div class="e-field3"></div>
+                </div>
+                <div class="authorization e-field bold">
+                  <div class="recipient" style="display:inline;">
+                    <mat-form-field id="recipient">
+                      <mat-label style="right: 20px;">שם המזמין</mat-label>
+                      <input class="contactus__input" matInput ngModel name="recipient"/>
+                    </mat-form-field>  
+                  </div>
+                  <div class="date" style="display:inline; margin-right: 400px;">
+                    <mat-form-field id="date">
+                      <mat-label style="right: 20px;">תאריך</mat-label>
+                      <input class="contactus__input" matInput ngModel name="date"/>
+                    </mat-form-field>  
+                  </div>
+                  <div class="signature" style="display:inline; margin-right: 530px;">
+                    <mat-form-field id="signature">
+                      <mat-label style="right: 20px;">חתימה</mat-label>
+                      <input class="contactus__input" matInput ngModel name="signature"/>
+                    </mat-form-field>  
+                  </div>
+                </div>
+                <div class="e-field"></div>
+                <button class="send-order" type="submit">שלח הזמנה</button>
+                <div class="e-field"></div>
+                <div class="e-field"></div>
+
+            </form>
+        </div>
+        <div class="contactus block">
+            <img class="contactus__image" src="assets/contactus_fullop.png" />
+            <div class="contactus__image-overlay"></div>
+            <div class="contactus__dash"></div>
+            <div class="contactus__title-header">אנו כאן לשירותכם</div>
+            <div class="contactus__title">צרו עימנו קשר</div>
+            <div class="contactus__location">המרכבה 52, אזור התעשייה חולון</div>
+            <img class="contactus__location-icon" src="assets/location_icon.png" />
+            <div class="contactus__phone">03-6540500</div>
+            <img class="contactus__phone-icon" src="assets/phone-call.png" />
+            <div class="contactus__email">prolift@prolift.co.il</div>
+            <img class="contactus__email-icon" src="assets/envelope.png" />
+            <!---->
+            <form (ngSubmit)="onSubmitContact(c)" class="contactus__form form block" #c="ngForm" id="contactForm" dir="rtl" >
+              <mat-form-field id="name">
+                <mat-label>שם מלא</mat-label>
+                <input class="contactus__input" matInput ngModel name="name">
+              </mat-form-field>
+              <mat-form-field id="company">
+                <mat-label>חברה</mat-label>
+                <input class="contactus__input" matInput ngModel name="company"/>
+              </mat-form-field>
+              <mat-form-field id="phonenumber">
+                <mat-label>טלפון</mat-label>
+                <input class="contactus__input" matInput ngModel name="phone"/>
+              </mat-form-field>
+              <mat-form-field id="emailaddress">
+                <mat-label>דוא"ל</mat-label>
+                <input class="contactus__input" matInput ngModel name="email"/>
+              </mat-form-field>
+              <mat-form-field id="message">
+                <mat-label>הודעה</mat-label>
+                <input class="contactus__input" matInput placeholder="" value="" ngModel name="message"/>
+              </mat-form-field >
+              <button id="formSubmit" (click)="onSubmitContact(c)" type="submit">שלח</button>
+            </form>
+            <!-- <button id="formSubmit">שלח</button> -->
+        </div>
+    
+        <div class="footer block">
+            <div class="footer__href-home">דף בית</div>
+            <div class="footer__href-about-us">אודות</div>
+            <div class="footer__href-products">מוצרים</div>
+            <div class="footer__href-order-certificate">טופס הזמנה</div>
+            <div class="footer__href-settings">תמיכה טכנית</div>
+            <div class="footer__href-contact">צור קשר</div>
+            <div class="footer__address">
+              המרכבה 25 אזור תעשיה חולון, ת.ד 3652 ראש העין, ישראל
+            </div>
+            <div class="footer__phone">טלפון 03-6540500, פקס 03-6540502</div>
+            <div class="footer__href-search-tool">חפש</div>
+        </div>
+      </div>
+    </div>
+</div>

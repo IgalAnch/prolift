@@ -1,0 +1,66 @@
+@use './../../../app/scss/prolift.scss' as *;
+
+[class*="products__all__product"] {
+    height: 360px; width: 25%; display: inline-block; 
+    display: flex; align-items: center; justify-content: center;
+
+    .overlay-button { display:none}
+    .overlay-order {display:none}
+
+    .products__all__product-overlay { display: none;
+      position: absolute;
+      width: 292px !important; height: 360px; background-color: black; opacity: 0.6;
+      .__product__text-overlay {
+        .__product__name-overlay { 
+          font-weight:bold; color: $black; font-size: 23px; margin-right: 55px;
+          width: max-content !important;
+          color:white; display:none;
+        }
+        .__product__type-overlay {
+          font-weight:bold; color: $blue; margin-right: 54px; margin-top: 251px; font-size: 17px;
+          color:white; display:none;
+        }
+      }
+    }
+    img { max-height: 220px;  position: absolute; z-index: -1}
+    .__product__text {
+      margin-top: 75px;
+      .__product__name {
+        font-weight:bold; color: $black; font-size: 23px;
+        width: max-content !important;
+      }       
+      .__product__type {
+        font-weight:bold; color: $blue; right: 45px; margin-top: 125px; font-size: 17px
+      }   
+    }
+  }
+//   .products__all__product:hover {
+//     .products__all__product-overlay {
+//       display: block; z-index: 10;
+//       .__product__text-overlay {
+//         .__product__name-overlay{ color:white; display:block}
+//         .__product__type-overlay{ color:white; display:block}
+//       }
+//     }
+//     .__product__text {
+//       display: none;
+//     }
+//     .overlay-button { 
+//       display: block; margin-bottom: 40px;
+//       margin-left: 87px;
+//       width: 129px;  height: 60px; z-index: 500;
+//       color: #ffffff;  background-color: $blue;
+//       font-size: 17px;  font-weight: bold;  line-height: 1.89;
+//     }
+//     .overlay-order { display: block;
+//       position: absolute; margin-bottom: 40px;
+//       margin-right: 130px;
+//       width: 57px;  height: 60px; z-index: 500;
+//       color: #ffffff;  background-color: $blue;
+//       font-size: 17px;  font-weight: bold;  line-height: 1.89;
+//       img {
+//         max-width: 80px !important;
+//         top: 15px; right: 17px;
+//       }
+//     }  
+//  }

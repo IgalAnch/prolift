@@ -1,0 +1,254 @@
+@use './../../../app/scss/prolift.scss' as *;
+
+.page { position: absolute; width: 100%; top: 0 }
+.container-fluid { position: relative; width: 100% }
+::ng-deep .row { margin: 0 }
+
+  .row > :not(.banner) {
+    position: relative;
+    font-family: Assistant; font-size: 20px; font-weight: 300; font-stretch: normal;
+    font-style: normal; letter-spacing: normal; text-align: right;
+
+    // * {  //BORDER FOR TESTING
+    //     border: 1px solid rgb(185, 28, 185);
+    // }
+  }
+
+.banner {
+  position: absolute;
+    > * { position: relative }
+  .banner__image { z-index: -1; width: 100% }
+
+  .banner__title {@include banner__title}
+}
+
+.content {
+    > * { position: relative }
+  background: white; border-top: 5px solid #3047d3; top: 445px; width: 1920px; height: 2500px;  
+  .intro {
+      width:1168px; height: 600px; right: 376px;
+       > * {position: absolute}
+      .intro__info {  top: 100px; width: 584px; font-weight: 400}
+      .intro__login {  
+        top: 100px; left:0px; width: 584px; height: 300px; font-weight: 400;
+
+        .intro__login__form{
+            position: relative;
+             > * {position:absolute}
+            top: 0px; width: 584px; height: 238px;
+
+            .login-form {
+                * {font-weight: 400}
+                > * {position:absolute}
+                input.mat-input-element { color: #9d9d9d }  
+                input { caret-color: #9d9d9d }
+                ::ng-deep .form__input { padding-bottom: 5px; border-bottom: 0.5px solid #ffffff }
+                ::ng-deep .form__input:focus { padding-bottom: 5px; border-bottom: 0.5px solid #3047d3 }
+                ::ng-deep .mat-form-field-underline { display: none }
+                mat-label { color: #9d9d9d } 
+
+                .username-icon { right: 20px; top: 84px} //84px top
+                #username { right: 42px; top: 58px}
+                .password-icon { right: 300px; top: 84px}
+                #password { right: 320px; top: 58px}
+                button {
+                    top: 159px;
+                    width: 173px;  height: 66px;
+                    color: #ffffff;  background-color: #3047d3;
+                    font-size: 19px;  font-weight: bold;  line-height: 1.89;
+                }
+                .signup {top: 205px; right: 380px; color: $blue; text-decoration: underline}
+                .forgot-password {top: 205px; right: 476px; width: max-content !important}
+            }
+
+            .intro__login__form__title {
+                top: 20px;
+                font-weight: bold;
+                color : $blue;
+            }
+
+        }
+    }
+  }
+  .main-info {
+    > * {position: relative}
+    position: relative; right: 376px; width:1168px; height: 1000px;
+    .upper {
+         > * {position: absolute} height: 200px;
+        .upper__dash {
+            top: 28px;
+            @include dash;
+        }
+        .upper__title-header {
+            right: 50px;
+            @include title-header
+        }
+        .upper__title {
+            top: 53px;
+            @include title
+        }
+    }
+    .lower {
+         > * {position: relative} height: 500px;
+        .request-form {
+            > * {
+                position: relative;
+                > * {
+                    position: relative;
+                    right: 22px;
+                    width: 40%; display: inline-block;
+                    mat-form-field {width: 50%; top: 13px}
+                }
+            }
+            input.mat-input-element { color: #9d9d9d }  
+            input { caret-color: #9d9d9d }
+            ::ng-deep .form__input { padding-bottom: 5px; border-bottom: 0.5px solid #ffffff }
+            ::ng-deep .form__input:focus { padding-bottom: 5px; border-bottom: 0.5px solid #3047d3 }
+            ::ng-deep .mat-form-field-underline { display: none }
+            mat-label { color: #9d9d9d } 
+
+            button {
+                top: 50px;
+                width: 193px;  height: 66px;
+                color: #ffffff;  background-color: #3047d3;
+                font-size: 19px;  font-weight: bold;  line-height: 1.89;
+            }
+        }
+    }
+  }
+  .categories {
+    width: 1168px; right: 376px; height: 2900px;
+    .title {
+       height: 190px; width: 100%;
+       > * {position: absolute}
+      .title__dash {
+        @include dash;
+        top: 26px;
+      }
+      .title__title-header {
+        @include title-header;
+        right: 44px;
+      }
+      .title__title {
+        @include title;
+        top: 50px;
+      }
+    }
+
+    .category { margin-top: 110px;
+      display: flex;
+      height: 308px; width: 100%;
+      .category__pic { display: inline-block;
+        width: 28%; height: 308px;
+        img {
+          min-width: 60%; max-height: 100%;
+        }
+      }
+      .category__split {
+        width: 6%; height: 308px;
+      }
+
+      .category__parent {
+        width: 66%; height: 308px;
+        .__title {
+          display: inline-block; width: 100%; min-height: 60px;
+          font-size: 26px; font-weight: bold;
+        }
+        .category__content { display: flex;
+          flex-direction: column; flex-flow: column wrap;
+          width: 100%; height: 248px;
+          .pdf {
+            width: 50%; min-height: 80px;
+            img {
+              margin-top: 3px; margin-right: 3px;
+            }
+            .text { position: absolute; margin-right: 90px; margin-top: 10px; color: #4b8687;
+              width: 19%; height: 25px; font-weight: 400;
+            }
+            .size { position: absolute; margin-right: 90px; margin-top: 45px; color: #4b8687;
+              width: 19%; height: 25px; font-weight: 400;
+            }
+
+          }
+        }
+      }
+    }
+  }
+}
+.contactus {
+  position: relative;
+  top: 0px; width: 1920px; height: 664px;
+    > * { position: absolute }  
+  .contactus__dash,.contactus__title-header,.contactus__title,.contactus__location-icon,
+  .contactus__phone-icon,.contactus__email-icon,.contactus__location,.contactus__phone,.contactus__email
+    { color: #fefefe }
+
+  .contactus__location-icon,.contactus__email-icon,.contactus__phone-icon { width: 27px }
+  
+  .contactus__image { z-index: -1; width: 1920px; height: 664px }
+  .contactus__image-overlay { opacity: 0.5; background-color: black; width: 1920px; height: 664px }
+  .contactus__dash { width: 27px; height: 3px; top: 157px; right: 376px }
+  .contactus__title {
+    color: #f9f9f9; top: 192px; right: 374px; width: max-content !important; height: 37px;
+    font-size: 47px; font-weight: bold; line-height: 1.17;
+  }
+  .contactus__title-header {
+    top: 131px; right: 422px; width: max-content !important; height: 17px;
+    font-size: 18px; font-weight: bold; line-height: 3.06; letter-spacing: 1.8px;
+  }
+  .contactus__location {
+    width: max-content !important; height: 22px; top: 306px; right: 426px;
+    font-size: 23px; line-height: 0.5;
+  }
+  .contactus__location-icon { top: 296px; right: 376px; height: 37px }
+  .contactus__phone {
+    width: max-content !important; height: 16px; top: 368px; right: 425px;
+    font-size: 23px; line-height: 0.5;
+  }
+  .contactus__phone-icon { top: 360px; right: 374px; height: 27px }
+  .contactus__email {
+    width: max-content !important; height: 22px; top: 425px; right: 426px;
+    font-size: 23px; line-height: 0.5;
+  }
+  .contactus__email-icon { top: 423px; right: 373px; height: 21px } 
+
+  .form {                                        /*::ng-deep*/
+    font-size: 19px; font-weight: 600; line-height: 1.84; color: #fefefe;
+      #name,#company,#phonenumber,#emailaddress,#message { position:absolute }
+      #name { width:266px; top: 151px; right: 970px }
+      #company { width:266px; top: 151px; right: 1280px }
+      #phonenumber { width:266px; top: 256px; right: 970px }
+      #emailaddress { width:266px; top: 256px; right: 1280px }
+      #message { width: 577px; top: 355px; right: 970px }
+    input.mat-input-element { color: #fefefe }  
+    input { caret-color: #9d9d9d }
+    ::ng-deep .contactus__input { padding-bottom: 5px; border-bottom: 0.5px solid #fefefe }
+    ::ng-deep .contactus__input:focus { padding-bottom: 5px; border-bottom: 0.5px solid #3047d3 }
+    ::ng-deep .mat-form-field-underline { display: none }
+    mat-label { color: #fefefe }    
+  }
+  #formSubmit {
+    position: absolute; top: 481px;  right: 983px; 
+    width: 183px;  height: 66px;
+    color: #ffffff;  background-color: #3047d3;
+    font-size: 19px;  font-weight: bold;  line-height: 1.89;
+  }
+}
+
+.footer {
+  position: relative;
+  background-color: #131313; top: 0px;  width: 1924px;  height: 244px;
+  font-size: 17px;  font-weight: 600; line-height: 2.18;
+    > * { position: absolute; height: 13px; color: #7a7a7a }
+  .footer__href-home,.footer__href-about-us,.footer__href-products,.footer__href-order-certificate,
+  .footer__href-settings,.footer__href-contact,.footer__address { top: 73px }
+    .footer__href-home { right: 380px }
+    .footer__href-about-us { right: 458px }
+    .footer__href-products { right: 530px }
+    .footer__href-order-certificate { right: 612px }
+    .footer__href-settings { right: 730px }
+    .footer__href-contact { right: 850px }
+    .footer__address { right: 1179px }
+    .footer__phone { top: 104px; right: 1305px }
+    .footer__href-search-tool { top: 145px; right: 402px }
+}

@@ -1,0 +1,7 @@
+<!-- <app-homepage id="app-homepage" dir="{{ direction }}"></app-homepage> -->
+
+<div class="main">
+    <app-header id="app-header" dir="{{ lang.langDirection }}"></app-header> 
+    <router-outlet (activate)="onActivate($event)" dir="{{ lang.langDirection }}"></router-outlet>
+    <!-- <app-footer></app-footer> -->
+</div>

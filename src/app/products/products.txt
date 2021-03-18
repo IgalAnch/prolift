@@ -1,0 +1,145 @@
+  p = [
+    { 
+      name : "כאן יופיע שם המוצר", 
+      type : "יחידות פיקוד ובקרה",
+      image : "assets/product2.png",
+      properties : [
+        "HiTech SMT technology",
+        "Control voltage (Safety line) 24 vdc",
+        "Main contactors modular high voltage driver card: Power transistors for up to 110Vdc or Dry contacts for 230Vac",
+        "Dual LED indication for all inputs: Green = OK, Red NO signal",
+        "LED indication for all outputs",
+        "Advanced Real Time fault indication by blinking the corresponding LED of the input that caused the fault",
+        "User friendly maintenance",
+        "Simple and quick fault diagnostic",
+        "Support Digital Floor Position Indicator",
+        "Optional support for unlocked landing doors detection (according to Russian standard)" 
+      ]
+    },
+    { 
+      name : "כאן יופיע שם המוצר", 
+      type : "בקרי דלתות",
+      image : "assets/product1.png",
+      properties : [
+        "LED indication for all outputs",
+        "Advanced Real Time fault indication by blinking the corresponding LED of the input that caused the fault",
+        "User friendly maintenance",
+        "Simple and quick fault diagnostic",
+        "Support Digital Floor Position Indicator",
+        "Optional support for unlocked landing doors detection (according to Russian standard)",
+        "Solar and Batterry operatable simultaneously",
+        "Looks cool"
+      ]
+    },
+    { 
+      name : "כאן יופיע שם המוצר", 
+      type : "ווסתי מהירות",
+      image : "assets/product3.png",
+      properties : [
+        "Original elevator gadget",
+        "Made of Reinforced Carbonated Alloy",
+        "Waterproof",
+        "Lightweight",
+        "Support Digital Floor Position Indicator",
+        "Optional support for unlocked landing doors detection (according to Russian standard)",
+        "Solar and Batterry operatable simultaneously",
+        "Builtin clock"
+      ]
+    },
+    { 
+      name : "כאן יופיע שם המוצר", 
+      type : "אביזרים",
+      image : "assets/products_6.jpg",
+      properties : [
+        "Original elevator gadget",
+        "Made of Reinforced Carbonated Alloy",
+        "Waterproof",
+        "Lightweight",
+        "Support Digital Floor Position Indicator",
+        "Optional support for unlocked landing doors detection (according to Russian standard)",
+        "Solar and Batterry operatable simultaneously",
+        "Builtin clock"
+      ]
+    },
+    { 
+      name : "כאן יופיע שם המוצר", 
+      type : "יחידות בקרה משולבת",
+      image : "assets/products_4.jpg",
+      properties : [
+        "Original elevator gadget",
+        "Made of Reinforced Carbonated Alloy",
+        "Waterproof",
+        "Lightweight",
+        "Support Digital Floor Position Indicator",
+        "Optional support for unlocked landing doors detection (according to Russian standard)",
+        "Solar and Batterry operatable simultaneously",
+        "Builtin clock"
+      ]
+    },
+    { 
+      name : "כאן יופיע שם המוצר", 
+      type : "יחידות בקרה משולבת",
+      image : "assets/products2.jpg",
+      properties : [
+        "Original elevator gadget",
+        "Made of Reinforced Carbonated Alloy",
+        "Waterproof",
+        "Product6 complimentary text"
+      ]
+    },
+    { 
+      name : "כאן יופיע שם המוצר", 
+      type : "יחידות בקרה משולבת",
+      image : "assets/pts2.jpg",
+      properties : [
+        "Original elevator gadget",
+        "Made of Reinforced Carbonated Alloy",
+        "Waterproof",
+        "Product6 complimentary text"
+      ]
+    },
+    { 
+      name : "כאן יופיע שם המוצר", 
+      type : "יחידות בקרה משולבת",
+      image : "assets/pts2.jpg",
+      properties : [
+        "Original elevator gadget",
+        "Made of Reinforced Carbonated Alloy",
+        "Waterproof",
+        "Product6 complimentary text"
+      ]
+    },
+    { 
+      name : "כאן יופיע שם המוצר", 
+      type : "יחידות בקרה משולבת",
+      image : "assets/pts2.jpg",
+      properties : [
+        "Original elevator gadget",
+        "Made of Reinforced Carbonated Alloy",
+        "Waterproof",
+        "Product6 complimentary text"
+      ]
+    },
+    { 
+      name : "כאן יופיע שם המוצר", 
+      type : "יחידות בקרה משולבת",
+      image : "assets/pts2.jpg",
+      properties : [
+        "Original elevator gadget",
+        "Made of Reinforced Carbonated Alloy",
+        "Waterproof",
+        "Product6 complimentary text"
+      ]
+    },
+    { 
+      name : "כאן יופיע שם המוצר", 
+      type : "יחידות בקרה משולבת",
+      image : "assets/pts2.jpg",
+      properties : [
+        "Original elevator gadget",
+        "Made of Reinforced Carbonated Alloy",
+        "Waterproof",
+        "Product6 complimentary text"
+      ]
+    },
+  ]

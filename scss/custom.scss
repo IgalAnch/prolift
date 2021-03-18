@@ -1,0 +1,11 @@
+$var: 2px; /* set in custom-variables.scss */
+$var: 1px !default; /* set in the bootstrap _variables.scss */
+
+// Your variable overrides
+$body-bg: rgb(228, 236, 111);
+$body-color: rgb(106, 106, 211);
+//$body-color: #008 !default;
+
+// Bootstrap and its default variables
+
+@import "node_modules/bootstrap/scss/bootstrap";

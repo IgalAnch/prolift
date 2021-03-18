@@ -1,0 +1,44 @@
+<div class="page" dir="rtl">
+    <div class="container-fluid px-0">
+        <div class="row">                                                                    
+            <div class="banner">
+                <img class="banner__image block" src="assets/layer_28.jpg" >
+                <div class="banner__title">תמיכה טכנית</div>
+            </div>
+            <div class="content block" >
+                <div class="intro">
+                    <div class="intro__info">
+                        <div class="">אנחנו עומדים לרשות כלל לקוחותינו בכל שאלה או בעיה
+                        <div class="">אנא מלאו את טופס הפניה הבא תוך ציון המוצר ומהות הבעיה
+                        <div class="">במקרים דחופים יש להתקשר לטלפון: 03-6540500
+                        <div class="">שעות הפעילות שלנו בימים א'-ה' בין השעות 09:00 - 16:00
+                        </div></div></div></div>
+                    </div>
+                    <div class="intro__login">
+                        <div class="">תכני התמיכה מיועדים ללקוחות פרוליפט בלבד.
+                        <div class="">על מנת לצפות בהם יש להתחבר למערכת.
+                        </div></div> 
+                        <div class="intro__login__form">
+                            <div class="intro__login__form__title">התחבר למערכת</div>
+                            <form class="login-form" #c="ngForm">
+                                <img class="username-icon" src="assets/ts_user.jpg"/>
+                                <mat-form-field id="username">
+                                    <mat-label>שם משתמש</mat-label>
+                                    <input class="form__input" matInput ngModel name="username">
+                                </mat-form-field>
+                                <img class="password-icon" src="assets/ts_pass.jpg"/>
+                                <mat-form-field id="password">
+                                    <mat-label>סיסמה</mat-label>
+                                    <input class="form__input" matInput ngModel name="password">
+                                </mat-form-field>
+                                <button id="formSubmit" (click)="login(c)" type="submit">כניסה</button>
+                                <div class="signup">הרשמה</div>
+                                <div class="forgot-password">שכחתי סיסמה</div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

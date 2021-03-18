@@ -1,0 +1,16 @@
+.footer {
+    background-color: #131313; top: 0px;  width: 100%;  height: 244px;
+    font-size: 17px;  font-weight: 600; line-height: 2.18;
+      > * { position: absolute; height: 13px; color: #7a7a7a }
+    .footer__href-home,.footer__href-about-us,.footer__href-products,.footer__href-order-certificate,
+    .footer__href-settings,.footer__href-contact,.footer__address { top: 73px }
+      .footer__href-home { right: 380px }
+      .footer__href-about-us { right: 458px }
+      .footer__href-products { right: 530px }
+      .footer__href-order-certificate { right: 612px }
+      .footer__href-settings { right: 730px }
+      .footer__href-contact { right: 850px }
+      .footer__address { right: 1179px }
+      .footer__phone { top: 104px; right: 1305px }
+      .footer__href-search-tool { top: 145px; right: 402px }
+  }

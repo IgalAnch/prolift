@@ -1,0 +1,18 @@
+1
+
+There are few things that you needed like a http, resolver and a sanitizer. here's a link to that explaining how to implement it from scratch.
+
+So for example you have a request then transforming the returned blob into a safe style for us to able to use it in our style directive
+
+this.http.get('assets/img/bg.jpg', { responseType: 'blob' }).pipe(
+  map( image => {
+    const blob: Blob = new Blob([image], { type: 'image/jpeg' });
+    const imageStyle = `url(${window.URL.createObjectURL(blob)})`;
+    return this.sanitizer.bypassSecurityTrustStyle(imageStyle);
+  })
+)
+
+
+
+
+

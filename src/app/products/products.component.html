@@ -1,0 +1,159 @@
+
+<div class="page" id="page" dir="rtl">
+  <div class="container-fluid px-0" >
+    <div class="row" >                                                                    
+      <div class="banner" id="plk" >
+        <img class="banner__image block" src="assets/products_head.jpg" >
+        <div class="banner__title">קטלוג מוצרים</div>
+      </div>
+      <div class="content"style="overflow:hidden" ><!--under here we should add inf scroll-->
+        <div class="intro">
+          <div class="intro__right">
+            <div class="intro__right__desc">
+              כאן יהיה טקסט עם הסבר כללי על קו המוצרים של החברה. מומלץ לא להעמיס יותר מדי טקסט, אלא לרשום רק את הדברים המרכזיים והחשובים ביותר שהייתם רוצים לציין.
+              טקסט נוסף טקסט נוסף  טקסט נוסף  טקסט נוסף  טקסט נוסף  טקסט נוסף טקסט נוסף טקסט נוסף  טקסט נוסף טקסט נוסף נוסף  טקסט נוסף טקסט נוסף  נוסף  טקסט נוסף טקסט נוסף נוסף  טקסט נוסף טקסט נוסף  נוסף  טקסט נוסף טקסט נוסף  נוסף  טקסט נוסף טקסט נוסף                 
+            </div>            
+            <div class="intro__right__hlink">קרא עוד על אודות החברה</div>
+            <img class="intro__right__left-caret" src="assets/products_left-caret.png"/>
+          </div>
+          <img src="assets/products_cert.jpg" class="intro__left"/>
+        </div>
+        <div class="title">
+          <div class="title__dash"></div>
+          <div class="title__title-header">מוזמנים לצפות ולהכיר את</div>
+          <div class="title__title">קטלוג המוצרים שלנו</div>
+        </div>
+        <div class="products" id="prod" style="overflow:hidden;">
+          <mat-tab-group class="matTabGroup" style="overflow:hidden;" (focusChange)="products.getTypeProducts($event)">
+            <mat-tab id="tab" label="הכל" style="overflow:hidden;">
+              <div id="productsAll123" class="products__all" style="overflow:hidden">
+                <!-- <div *ngFor="let cols of products.pd; let co = index" class="products__all__product_all{{co}}">
+                  <button class="overlay-button" [routerLink]="['/product', co ]">לדף מוצר</button>
+                  <button class="overlay-order">
+                    <img src="assets/products_order.png"/>
+                  </button>
+                  <div class="products__all__product-overlay">
+                    <div class="__product__text-overlay">
+                      <div class="__product__type-overlay">{{products.pd[co]==null?null:products.pd[co].type}}</div>
+                      <div class="__product__name-overlay">{{products.pd[co]==null?null:products.pd[co].name}}</div>
+                    </div>
+                  </div>
+                  <img src="{{products.pd[co]==null?null:products.pd[co].image}}">
+                  <div class="__product__text">
+                    <div class="__product__type">{{products.pd[co]==null?null:products.pd[co].type}}</div>
+                    <div class="__product__name">{{products.pd[co]==null?null:products.pd[co].name}}</div>
+                  </div>
+                </div> -->
+
+                <app-item *ngFor="let cols of products.pd; let co = index" class="products__all__product_all{{co}}" [colu]="co"></app-item> 
+              </div>
+              <!-- <mat-paginator style="float: right;"  [length]="products.p==null?null:products.p.length"
+                [hidePageSize]="true"
+                [pageSize]="products.pageSize"
+                [pageIndex]="products.pageInd"
+                [pageSizeOptions]="[3,8,12]"
+                (page)="pageEvent($event)"
+                >
+              </mat-paginator> -->
+            </mat-tab>
+            <mat-tab *ngFor="let row of products.productTypes; let ro = index" label="{{products.productTypes[ro].typename}}">
+              <div class="products__all">
+                <div [id]="'ss'+coo" *ngFor="let colo of products.productTypes_products[products.productTypes[ro].typename]; let coo = index" class="products__all__product_{{ro}}_{{coo}}">
+                  <button class="overlay-button" [routerLink]="['/product', coo ]">לדף מוצר</button>
+                  <button class="overlay-order">
+                    <img src="assets/products_order.png"/>
+                  </button>
+                  <div class="products__all__product-overlay">
+                    <div class="__product__text-overlay">
+                      <div class="__product__type-overlay">{{products.productTypes_products[products.productTypes[ro].typename][coo]==null?null:products.productTypes_products[products.productTypes[ro].typename][coo].type}}</div>
+                      <div class="__product__name-overlay">{{products.productTypes_products[products.productTypes[ro].typename][coo]==null?null:products.productTypes_products[products.productTypes[ro].typename][coo].name}}</div>
+                    </div>
+                  </div>
+                  <img src="{{products.productTypes_products[products.productTypes[ro].typename][coo]==null?null:products.productTypes_products[products.productTypes[ro].typename][coo].image}}">
+                  <div class="__product__text">
+                    <div class="__product__type">{{products.productTypes_products[products.productTypes[ro].typename][coo]==null?null:products.productTypes_products[products.productTypes[ro].typename][coo].type}}</div>
+                    <div class="__product__name">{{products.productTypes_products[products.productTypes[ro].typename][coo]==null?null:products.productTypes_products[products.productTypes[ro].typename][coo].name}}</div>
+                  </div>
+                </div>
+              </div>
+              <mat-paginator style="float: right;"  [length]="products.productTypes_products[products.productTypes[ro].typename]==null?null:products.productTypes_products[products.productTypes[ro].typename].length"
+                [hidePageSize]="true"
+                [pageSize]="products.pageSize"
+                [pageIndex]="products.pageInd"
+                [pageSizeOptions]="[3,8,12]"
+                (page)="products.getTypeProducts($event)"
+                >
+              </mat-paginator>
+            </mat-tab>
+            <!-- <mat-tab label="יחידות פיקוד ובקרה"></mat-tab> -->
+            <!-- <mat-tab label="ווסתי מהירות"></mat-tab>
+            <mat-tab label="יחידות בקרה משולבות"></mat-tab>
+            <mat-tab label="בקרי דלתות"></mat-tab>
+            <mat-tab label="אביזרים"></mat-tab> -->
+          </mat-tab-group>
+        </div>
+
+      </div>
+      <!-- <button (click)="products.createUpdateQuery()">createUpdateQuery</button>
+      <button (click)="products.updateDatabase()">updateDatabase</button>
+      <button (click)="products.updateDatabase2()">updateDatabase2</button>
+      <button (click)="products.getDatabase()">getDatabase</button> -->
+
+    </div>
+  </div>
+</div>
+
+<!--
+        <div class="contactus block">
+        <img class="contactus__image" src="assets/contactus_fullop.png" />
+        <div class="contactus__image-overlay"></div>
+        <div class="contactus__dash"></div>
+        <div class="contactus__title-header">אנו כאן לשירותכם</div>
+        <div class="contactus__title">צרו עימנו קשר</div>
+        <div class="contactus__location">המרכבה 52, אזור התעשייה חולון</div>
+        <img class="contactus__location-icon" src="assets/location_icon.png" />
+        <div class="contactus__phone">03-6540500</div>
+        <img class="contactus__phone-icon" src="assets/phone-call.png" />
+        <div class="contactus__email">prolift@prolift.co.il</div>
+        <img class="contactus__email-icon" src="assets/envelope.png" />
+        
+        <form (ngSubmit)="onSubmit(c)" class="contactus__form form block" #c="ngForm" id="contactForm" dir="rtl" >
+          <mat-form-field id="name">
+            <mat-label>שם מלא</mat-label>
+            <input class="contactus__input" matInput ngModel name="name">
+          </mat-form-field>
+          <mat-form-field id="company">
+            <mat-label>חברה</mat-label>
+            <input class="contactus__input" matInput ngModel name="company"/>
+          </mat-form-field>
+          <mat-form-field id="phonenumber">
+            <mat-label>טלפון</mat-label>
+            <input class="contactus__input" matInput ngModel name="phone"/>
+          </mat-form-field>
+          <mat-form-field id="emailaddress">
+            <mat-label>דוא"ל</mat-label>
+            <input class="contactus__input" matInput ngModel name="email"/>
+          </mat-form-field>
+          <mat-form-field id="message">
+            <mat-label>הודעה</mat-label>
+            <input class="contactus__input" matInput placeholder="" value="" ngModel name="message"/>
+          </mat-form-field >
+          <button id="formSubmit" (click)="onSubmit(c)" type="submit">שלח</button>
+        </form>
+      </div>
+
+      <div class="footer block">
+        <div class="footer__href-home">דף בית</div>
+        <div class="footer__href-about-us">אודות</div>
+        <div class="footer__href-products">מוצרים</div>
+        <div class="footer__href-order-certificate">טופס הזמנה</div>
+        <div class="footer__href-settings">תמיכה טכנית</div>
+        <div class="footer__href-contact">צור קשר</div>
+        <div class="footer__address">
+          המרכבה 25 אזור תעשיה חולון, ת.ד 3652 ראש העין, ישראל
+        </div>
+        <div class="footer__phone">טלפון 03-6540500, פקס 03-6540502</div>
+        <div class="footer__href-search-tool">חפש</div>
+      </div>
+    -->
+-->

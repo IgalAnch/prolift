@@ -1,0 +1,131 @@
+.container-fluid{
+  width: 100%;  position: sticky;  top: 0px;  right: 0px;  z-index: 5;  background: white;  padding: 0px;
+}
+
+.row{
+  height: 102px;  width: 100%;  background: white;  margin: 0px;  position: relative;  z-index: 5;
+  border: 0.5px solid gray;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.home-tab:hover,
+.infoTab:hover,
+.productsTab:hover,
+.orderTab:hover,
+.techTab:hover,
+.mailTab:hover {
+  background-color: #f5f5f5;
+  border-bottom: 3px solid #3047d3;
+}
+@media only screen and (min-width: 1024px) {
+  .logo {
+    width: 190px;
+    height: 102px;
+  }
+  .prolift-logo {
+    top: 15px;
+    right: 44px;
+  }
+  .logoAvizarim {
+    top: 54px;
+    right: 44px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .logo {
+    width: 100%;
+    height: 102px;
+  }
+  .prolift-logo {
+    top: 15px;
+    right: 324px;
+  }
+  .logoAvizarim {
+    top: 54px;
+    right: 324px;
+  }
+  .home-tab,
+  .infoTab,
+  .productsTab,
+  .mailTab,
+  .techTab,
+  .orderTab {background: white}
+}
+
+.prolift-logo{
+  text-align: center;  position: absolute;  color: white;
+  font-weight: bold;  font-size: 2rem;
+}
+
+.logo {background: #3047d3}
+
+.logoAvizarim {text-align: center;  color: white;  font-size: 1rem;  position: absolute}
+
+.home-tab{
+  width: 115px;  height: 102px; position: relative; outline: none;
+  img {position: absolute; right: 45px; top: 22px; pointer-events: none}
+  div{    
+    text-align: center;    font-weight: bold;color: black; font-size: 1.2rem;    top: 51px;
+    right: 27px;    position: absolute;    pointer-events: none;
+  }
+}
+
+.infoTab{
+  width: 92px;  height: 102px;  text-align: center;  position: relative;  outline: none;
+  img {position: absolute; right: 39px; top: 22px}
+  div {
+    text-align: center;    font-weight: bold;    color: black;    font-size: 1.2rem;
+    top: 51px;    right: 25px;    position: absolute;    pointer-events: none;
+  }
+}
+
+.productsTab{
+  width: 100px;  height: 102px;  text-align: center;  position: relative;  outline: none;
+  img {position: absolute; right: 36px; top: 22px}
+  div {
+    text-align: center;    font-weight: bold;    color: black;    font-size: 1.2rem;
+    top: 51px;    right: 23px;    position: absolute;
+  }
+}
+
+.orderTab{
+  width: 128px;  height: 102px;  text-align: center;  position: relative;  outline: none;
+  img {position: absolute; right: 53px; top: 22px}
+  div {
+    text-align: center;    font-weight: bold;    color: black;
+    font-size: 1.2rem;    top: 51px;    right: 19px;    position: absolute;
+  }
+}
+
+.techTab{
+  width: 150px;  height: 102px;  text-align: center;  position: relative;  outline: none;
+  img {position: absolute; right: 65px; top: 22px}
+  div {
+    text-align: center;    font-weight: bold;    color: black;    font-size: 1.2rem;
+    top: 51px;    right: 27px;    position: absolute;
+  }
+}
+.mailTab{
+  width: 110px;  height: 102px;  text-align: center;  position: relative;  outline: none;
+  img {position: absolute; right: 39px; top: 22px}
+  div {
+    text-align: center;    font-weight: bold;    color: black;
+    font-size: 1.2rem;    top: 51px;    right: 24px;    position: absolute;
+  }
+}
+
+.phone{
+  p {
+    max-width: 125px;  max-height: 17px;
+    font-family: Assistant;  font-size: 26px;
+    line-height: 1.35;  text-align: right;  color: #828181;
+    position: absolute;  left: 425px;  top: 35px;
+  }
+  img {height: 22px; width: 22px; position: absolute; top: 42px; left: 385px;}
+}
+
+.search {height: 21px;  width: 21px;  position: absolute;  top: 42px;  left: 244px}
+.map {width: 47px;  height: 27px;  position: absolute;  top: 42px;  left: 100px}
+.caret {width: 10px;  height: 7px;  position: absolute;  top: 52px;  left: 160px}
+
+.idk {position: absolute;  left: 410px;  width: 89px;  height: 103px}

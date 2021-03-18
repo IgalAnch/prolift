@@ -1,0 +1,80 @@
+<div class="container-fluid px-0">
+  <div class="row">
+    <div class="logo">
+      <div class="prolift-logo">פרוליפט</div>
+      <div class="logoAvizarim">אביזרים למעליות</div>
+    </div>
+    <div class="home-tab" routerLink="/home">
+      <img src="assets/homepage_icon.png"/>
+      <div>דף הבית</div>
+    </div>
+    <div class="infoTab" routerLink="/about">
+      <img src="assets/information_icon.png"/>
+      <div>אודות</div>
+    </div>
+    <div class="productsTab" routerLink="/products">
+      <img src="assets/box_icon.png"/>
+      <div>מוצרים</div>
+    </div>
+    <div class="orderTab" routerLink="/order">
+      <img src="assets/list_icon.png"/>
+      <div>טופס הזמנה</div>
+    </div>
+    <div class="techTab" routerLink="/tech" >
+      <img src="assets/settings_icon.png"/>
+      <div>תמיכה טכנית</div>
+    </div>
+    <div class="mailTab" routerLink="/contact">
+      <img src="assets/mail_icon.png"/>
+      <div>צור קשר</div>
+    </div>
+    <div class="phone">
+      <p>03-6540500</p>
+      <img src="assets/phone-call(1).png"/>
+    </div>
+    <img class="search" src="assets/search(1).png"/>
+    <!-- <div class="idk"></div> -->
+    <img class="map" src="assets/flat-world-map.png" [matMenuTriggerFor]="menu"/>
+    <img class="caret" src="assets/down-arrow.png" [matMenuTriggerFor]="menu"/>
+    <mat-menu #menu="matMenu" style="text-align: center">
+      <button mat-menu-item (click)="lang.ltr()">English</button>
+      <button mat-menu-item>Francuis</button>
+      <button mat-menu-item (click)="lang.rtl()">עברית</button>
+    </mat-menu>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <ul class="nav nav-tabs navbar-nav;">
+    <li role="presentation">
+      <a [style.color]="'dodgerblue'" routerLink="/login">Login</a>
+    </li>
+    <li role="presentation">
+      <a [style.color]="'dodgerblue'" routerLink="/shop">Shop</a>
+    </li>
+    <li role="presentation">
+      <a [style.color]="'dodgerblue'" routerLink="/sim">Sim</a>
+    </li>
+  </ul> -->
+<!-- <div class="row image" style="width: 1920px; height: 1551px"></div> -->
+
+      <!-- <fa-icon
+        [icon]="faTrash"
+        style="font-size: 15px; position: absolute"
+      ></fa-icon> -->
